@@ -20,7 +20,7 @@ COPY . $DISTRIBUTION_DIR
 RUN make PREFIX=/go clean binaries
 
 VOLUME ["/var/lib/registry"]
-EXPOSE 5000
+EXPOSE 5000 5001
 
 # run the script which downloads needed files from S3 and runs the registry
 ADD run_registry.sh run_registry.sh
